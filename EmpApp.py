@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+import Flask, render_template, request, redirect
 import os
 import boto3
 from botocore import UNSIGNED
