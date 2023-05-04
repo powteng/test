@@ -1,0 +1,12 @@
+sudo yum update -y
+sudo python3 -m venv assignment
+sudo assignment/bin/python -m pip install -U pip wheel setuptools
+sudo assignment/bin/python -m pip install flask boto3 pymysql
+
+sudo yum install git httpd -y
+sudo systemctl enable httpd
+sudo systemctl start httpd
+
+sudo firewall-cmd --permanent --zone=public --add-service=http
+sudo firewall-cmd --permanent --zone=public --add-service=https
+sudo firewall-cmd --reload

@@ -1,0 +1,68 @@
+{% extends "layout/layout.html" %}
+{% block title %}Employee's Performance{% endblock %}
+{% block current %}Performance / Add Employee's Performance{% endblock %}
+{% block content %}
+<!-- Content Start -->
+<div class="container-fluid py-5">
+  <div class="container p-5 d-flex justify-content-center">
+    <div class="col-lg-5">
+      <div class="card border-0">
+        <div class="card-header bg-secondary text-center p-4">
+          <h1 class="text-white m-0">Add Employee's Performance</h1>
+        </div>
+        <div class="card-body rounded-bottom p-5 border border-primary">
+          <form action="/add_perf_post" autocomplete="on" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+              <select name="emp_id" id="emp_id" class="custom-select border-secondary border-1 px-4" style="height: 47px">
+                {% for employee in employees %}
+                <option value="{{employee.emp_id}}">{{employee.first_name}} {{employee.last_name}} </option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="custom-select border-secondary border-1 px-4" style="height: 47px" name="course">
+                <option selected disabled>Course</option>
+                
+                {% for course in courses %}
+                <option value="{{course.id}}">{{course.course_name}} </option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <div class="form-group">
+              <input type="number" class="form-control border-secondary border-1 p-4" placeholder="Traning Score"
+                required="required" step="5" name="score" />
+            </div>
+
+            <div class="form-group">
+              <select class="custom-select border-secondary border-1 px-4" style="height: 47px" name="grade">
+                <option selected disabled>Grade</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <select class="custom-select border-secondary border-1 px-4" style="height: 47px" name="performance">
+                <option selected disabled>Performance</option>
+                <option value="Good">Good</option>
+                <option value="Average">Average</option>
+                <option value="Bad">Bad</option>
+              </select>
+            </div>
+            <div>
+              <button class="btn btn-primary btn-block border-0 py-3" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Content End -->
+{% endblock %}

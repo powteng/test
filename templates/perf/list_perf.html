@@ -1,0 +1,51 @@
+{% extends "layout/layout.html" %}
+{% block title %}Employee's Performance List{% endblock %}
+{% block current %}Performance / Employee's Performance List{% endblock %}
+{% block content %}
+      <!-- content Start -->
+  <div class="container-fluid py-5">
+    <div class="container">
+      <a href="/add_perf" class="nav-item nav-link">Add Performance</a>
+      
+      <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+          <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Score</th>
+            <th>Grade</th>
+            <th>Performance</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for perf in perfs %}
+
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">{{perf.first_name +  " " + perf.last_name }}</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <p class="fw-normal mb-1">{{perf.course_name}}</p>
+            </td>
+            <td>{{perf.score}}</td>
+            <td>{{perf.grade}}</td>
+            <td>{{perf.performance}}</td>
+            <td>
+              <a href={{"/edit_perf/" + perf.id|string}}>Edit</a>
+              <a href={{"/delete_perf/" + perf.id|string}}>Delete</a>
+            </td>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+  <!-- content End -->
+{% endblock %}

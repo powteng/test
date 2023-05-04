@@ -1,0 +1,44 @@
+<div class="form-group">
+    <input type="text" class="form-control border-secondary border-1 p-4" placeholder="Name" required="required"
+        name="name" 
+        {% if leave is not none %}
+            value="{{ name }}"
+        {% endif %}
+        />
+</div>
+
+<div class="form-group">
+    <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+        <input placeholder="select date" type="date" name="start_date" class="form-control" value={{leave.start_date}}>
+        <label for="example">Start Date</label>
+        <i class="fas fa-calendar input-prefix" tabindex=0></i>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+        <input placeholder="select date" type="date" name="end_date" class="form-control" value={{leave.end_date}}>
+        <label for="example">End Date</label>
+        <i class="fas fa-calendar input-prefix" tabindex=0></i>
+      </div>
+  </div>
+
+<div class="form-group">
+    <input type="number" class="form-control border-secondary border-1 p-4" placeholder="Total Days" required="required"
+        steps="1" name="total_day" 
+        {% if leave is not none %}
+            value="{{ leave.total_day }}"
+        {% endif %}
+        />
+</div>
+<div class="form-group">
+    <input type="text" class="form-control border-secondary border-1 p-4" placeholder="Reason" required="required"
+        name="reason"
+        {% if leave is not none %}
+            value="{{leave.reason}}"
+        {% endif %}
+        />        
+</div>
+<input type="hidden" name="leave_id" value="{{leave.id}}">
+
+<!-- https://stackoverflow.com/questions/67994470/input-field-value-attribute-truncated-after-the-first-space-when-passing-a-fla -->

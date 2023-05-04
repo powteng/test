@@ -1,0 +1,95 @@
+<div class="form-group">
+    <input type="text" class="form-control border-secondary border-1 p-4" placeholder="Name" required="required"
+        name="name" disabled
+        {% if performance is not none %}
+        value={{ perf.first_name + perf.last_name}}
+        {% endif %}
+        />
+</div>
+<input type="hidden" name="emp_id" value="{{ perf.emp_id }}">
+<div class="form-group">
+  <input type="text" class="form-control border-secondary border-1 p-4" placeholder="Name" required="required"
+  name="name" disabled
+  {% if performance is not none %}
+  value="{{ perf.course_name }}"
+  {% endif %}
+  />
+  </div>
+
+  <div class="form-group">
+    <select class="custom-select border-secondary border-1 px-4"
+      style="height: 47px"
+      name="performance"
+    >
+      <option 
+      {% if perf is not none %}
+          disabled
+      {% else %}
+          selected disabled
+      {% endif %} >Performance</option>
+
+      <option value="Good"
+      {% if perf is not none %}
+         {% if perf.course == "Good" %}
+              selected
+         {% endif %}
+      {% endif %}>Good</option>
+
+      <option value="Average"
+      {% if perf is not none %}
+         {% if perf.course == "Average" %}
+              selected
+         {% endif %}
+      {% endif %}>Average</option>
+
+      <option value="Bad"
+      {% if perf is not none %}
+         {% if perf.course == "Bad" %}
+              selected
+         {% endif %}
+      {% endif %}>Bad</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <select class="custom-select border-secondary border-1 px-4" style="height: 47px" name="grade">
+      <option  
+      {% if perf is not none %}
+         disabled
+          {% else %}
+        selected disabled
+      {% endif %} >Grade</option>
+
+      <option value="A"
+      {% if perf is not none %}
+          {% if perf.course == "A" %}
+           selected
+          {% endif %}
+       {% endif %}>A</option>
+
+       <option value="B"
+      {% if perf is not none %}
+          {% if perf.course == "B" %}
+           selected
+          {% endif %}
+       {% endif %}>B</option>
+      <option value="C"      
+      {% if perf is not none %}
+         {% if perf.course == "C" %}
+              selected
+         {% endif %}
+      {% endif %}>C</option>
+
+      <option value="D"      
+      {% if perf is not none %}
+         {% if perf.course == "D" %}
+              selected
+         {% endif %}
+      {% endif %}>D</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <input type="number" class="form-control border-secondary border-1 p-4" placeholder="Traning Score"
+      required="required" step="5" name="score" value="{{perf.score}}"/>
+  </div>

@@ -1,0 +1,103 @@
+{% extends "layout/layout.html" %}
+{% block title %}*Unconventional* About Us{% endblock %}
+{% block current %}About{% endblock %}
+
+{% block content %}
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+  
+              <img src="{{url_for('static', filename='panda.png')}}" >
+  
+            </div>
+            <div class="col-lg-5">
+              <p class="section-title pr-5">
+                <span class="pr-2">Learn About Us</span>
+              </p>
+              <h1 class="mb-4">Best Center For Your Employee</h1>
+              <p>
+                  Failure should be our teacher, not our undertaker. Failure is delay, not defeat. It is a temporary detour, not a dead end. Failure is something we can avoid only by saying nothing, doing nothing, and being nothing.
+  
+              </p>
+              <div class="row pt-2 pb-4">
+  
+                <div class="col-6 col-md-8">
+                  <ul class="list-inline m-0">
+                    <li class="py-2 border-top border-bottom">
+                      <i class="fa fa-check text-primary mr-3"></i>Just give up.
+                    </li>
+                    <li class="py-2 border-bottom">
+                      <i class="fa fa-check text-primary mr-3"></i>Just sleep.
+                    </li>
+                    <li class="py-2 border-bottom">
+                      <i class="fa fa-check text-primary mr-3"></i>Just eat and play.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <a href="" class="btn btn-primary mt-2 py-2 px-4">Click to Not Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About End -->
+  
+      <!-- Facilities Start -->
+      <div class="container-fluid pt-5">
+        <div class="container pb-3">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 pb-1">
+              <div
+                class="d-flex bg-light shadow-sm border-top rounded mb-4"
+                style="padding: 30px"
+              >
+                <i
+                  class="flaticon-017-toy-car h1 font-weight-normal text-primary mb-3"
+                ></i>
+                <div class="pl-4">
+                  <h4>Unsafe Transportation</h4>
+                  <p class="m-0">
+                    Best Transportation service with "0" faility.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-1">
+              <div
+                class="d-flex bg-light shadow-sm border-top rounded mb-4"
+                style="padding: 30px"
+              >
+                <i
+                  class="flaticon-025-sandwich h1 font-weight-normal text-primary mb-3"
+                ></i>
+                <div class="pl-4">
+                  <h4>Unhealthy food</h4>
+                  <p class="m-0">
+                    Exceptionly Not Scrumptious and Perfactly Not Cancer Causing Food  
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-1">
+              <div
+                class="d-flex bg-light shadow-sm border-top rounded mb-4"
+                style="padding: 30px"
+              >
+                <i
+                  class="flaticon-047-backpack h1 font-weight-normal text-primary mb-3"
+                ></i>
+                <div class="pl-4">
+                  <h4>Torture Tour</h4>
+                  <p class="m-0">
+                    A place to spent your mind and body. Safe and Harmless.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Facilities End -->
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout/layout.html" %}
+{% block title %}Add Employee{% endblock %}
+{% block current %}Employee / Add Employee{% endblock %}
+{% block content %}
+        <!-- Content Start -->
+        <div class="container-fluid py-5">
+            <div class="container p-5 d-flex justify-content-center">
+              <div class="col-lg-5">
+                <div class="card border-0">
+                  <div class="card-header bg-secondary text-center p-4">
+                    <h1 class="text-white m-0">Add new Employee</h1>
+                  </div>
+                  <div class="card-body rounded-bottom p-5 border border-primary">
+                    <form action="/add_emp_post" autocomplete="on" method = "POST" enctype="multipart/form-data">
+                      {% include 'employee/EmpFormLayout.html' %}
+                      <div>
+                        <button
+                          class="btn btn-primary btn-block border-0 py-3"
+                          type="submit"
+                        >
+                          Submit 
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Content End -->
+{% endblock %}

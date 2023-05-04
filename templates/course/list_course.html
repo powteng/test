@@ -1,0 +1,37 @@
+{% extends "layout/layout.html" %}
+{% block title %}Course List{% endblock %}
+{% block current %}Course List{% endblock %}
+{% block content %}
+      <!-- content Start -->
+  <div class="container-fluid py-5">
+    <div class="container">
+      <a href="/list_course" class="nav-item nav-link">Course</a>
+
+      <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+          <tr>
+            <th>Course ID</th>
+            <th>Course Name</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          {% for course in courses %}
+
+          <tr>
+            <td>
+              <p class="fw-normal mb-1">{{course.id}}</p>
+            </td>
+            <td>
+              <p class="fw-normal mb-1">{{course.course_name}}</p>
+            </td>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+  <!-- content End -->
+{% endblock %}

@@ -1,0 +1,32 @@
+python_home = '/home/ec2-user/assignment/'
+
+import sys
+import site
+
+# Calculate path to site-packages directory.
+
+# python_version = '.'.join(map(str, sys.version_info[:2]))
+python_version = '.'.join('3.7')
+
+site_packages = python_home + '/lib/python%s/site-packages' % python_version
+
+# Add the site-packages directory.
+
+site.addsitedir(site_packages)
+
+Define PROJECT_PATH /var/www/html/cc-assignment/
+
+<virtualhost *:80>
+    # wsgi settings
+    WSGIDaemonProcess cc-assignment python-path=${PROJECT_PATH}:/var/www/html/assignment/lib/python3.7/site-packages
+    WSGIProcessGroup cc-assignment
+    WSGIScriptAlias / ${PROJECT_PATH}/app.wsgi
+
+    # map server side static directory to {ip or domain_name}/static
+    Alias /static  ${PROJECT_PATH}/static
+
+    # allow all requests to access this project file
+    <Directory ${PROJECT_PATH}/>
+        Require all granted
+    </Directory>
+</virtualhost>

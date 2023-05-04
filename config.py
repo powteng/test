@@ -1,0 +1,7 @@
+customhost = "employee.cdvvcgampsrc.us-east-1.rds.amazonaws.com"
+customuser = "aws_user"
+custompass = "Bait3273"
+customdb = "employee"
+custombucket = "cheahchinhong-employee1"
+customregion = "us-east-1"
+serverurl = "us-east-1"

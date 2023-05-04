@@ -1,0 +1,200 @@
+{% extends "layout/layout.html" %}
+{% block title %}*Unconventional* Portfolio{% endblock %}
+{% block current %}Portfolio{% endblock %}
+{% block content %}
+<!-- Content Start -->
+<div class="container-fluid py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+
+        <img src="{{url_for('static', filename='panda.png')}}">
+
+      </div>
+      <div class="col-lg-5">
+        <p class="section-title pr-5">
+          <span class="pr-2">Who are we?</span>
+        </p>
+        <h1 class="mb-4">Educenter of the lifetime that you won't regret!</h1>
+        <p>
+          Join our trustworthy teams with world-class quality torture education that you will never forget.
+          A once in a lifetime experience that will further rejoice your life experience.
+          Complete and safe torture equiptments and facilities that enchance your experience.
+        </p>
+        <div class="row pt-2 pb-4">
+
+          <div class="col-6 col-md-8">
+            <ul class="list-inline m-0">
+              <li class="py-2 border-top border-bottom">
+                <i class="fa fa-check text-primary mr-3"></i>Be depressed
+              </li>
+              <li class="py-2 border-bottom">
+                <i class="fa fa-check text-primary mr-3"></i>Be sleepy
+              </li>
+              <li class="py-2 border-bottom">
+                <i class="fa fa-check text-primary mr-3"></i>Be fat
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- <a href="" class="btn btn-primary mt-2 py-2 px-4">Click to Not Learn More</a> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Content End -->
+
+<!-- Team Start -->
+<div class="container-fluid pt-5">
+  <div class="container">
+    <div class="text-center pb-2">
+      <p class="section-title px-5">
+        <span class="px-2">Our Teachers</span>
+      </p>
+      <h1 class="mb-4">Meet Our Teachers</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3 text-center team mb-5">
+        <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%">
+          <img class="img-fluid w-100" src="{{ url_for('static',filename='photo/1.png') }}" alt="" />
+          <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px" href="#"><i
+                class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h4>Sammi Low</h4>
+        <i>Master in Data Science</i>
+      </div>
+      <div class="col-md-6 col-lg-3 text-center team mb-5">
+        <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%">
+          <img class="img-fluid w-100 h-100" src="{{ url_for('static',filename='photo/2.png') }}" alt="" />
+          <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px" href="#"><i
+                class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h4>Yean Ling</h4>
+        <i>Master in Biology</i>
+      </div>
+      <div class="col-md-6 col-lg-3 text-center team mb-5">
+        <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%">
+          <img class="img-fluid w-100" src="{{ url_for('static',filename='photo/3.png') }}" alt="" />
+          <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px" href="#"><i
+                class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h4>Svannah Leong</h4>
+        <i>Master in Finance</i>
+      </div>
+      <div class="col-md-6 col-lg-3 text-center team mb-5">
+        <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%">
+          <img class="img-fluid w-100" src="{{ url_for('static',filename='photo/4.png') }}" alt="" />
+          <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px" href="#"><i
+                class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h4>Bryan Lim</h4>
+        <i>Master in Art</i>
+      </div>
+
+    </div>
+
+    <div class="text-center">
+      <p style="font-size: 20px;">Memorable and Notable mention - <span>Zhian Wei, The Crayon SinChan</span>
+        <img src="{{ url_for('static',filename='photo/5.png') }}" alt="" style="width: 60px" />
+      </p>
+    </div>
+
+  </div>
+</div>
+<!-- Team End -->
+
+<!-- Testimonial Start -->
+<div class="container-fluid py-5 bg-primary">
+  <div class="container p-0">
+    <div class="text-center pb-2">
+      <h1 class="mb-4">What Clients Say!</h1>
+    </div>
+    <section class="mx-auto my-5 d-flex justify-content-center">
+
+      <div class="card mx-2">
+        <div class="card-body">
+          <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
+            <div class="blockquote-custom-icon bg-danger shadow-1-strong">
+              <i class="fa fa-quote-left text-white"></i>
+            </div>
+            <p class="mb-0 mt-2 font-italic">
+              "I just wanted to share a quick note and let you know that you guys do a really good job.
+              I’m glad I decided to work with you. It’s really great how easy your course are to handle. I
+              never have any problem at all.
+              <a href="#" class="text-info">@realDonaldTrump</a>."
+            </p>
+            <footer class="blockquote-footer pt-4 mt-4 border-top">
+              Someone torture by
+              <cite title="Source Title">One of Us</cite>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="card mx-2">
+        <div class="card-body">
+          <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
+            <div class="blockquote-custom-icon bg-danger shadow-1-strong">
+              <i class="fa fa-quote-left text-white"></i>
+            </div>
+            <p class="mb-0 mt-2 font-italic">
+              "Wow. I just updated my profile and it was SO SIMPLE. I am blown away. You guys truly kick
+              ass. Thanks for being so awesome. High fives!
+              <a href="#" class="text-info">@elonmusk</a>."
+            </p>
+            <footer class="blockquote-footer pt-4 mt-4 border-top">
+              Someone perished by
+              <cite title="Source Title">Two of Us</cite>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="card mx-2">
+        <div class="card-body">
+          <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
+            <div class="blockquote-custom-icon bg-danger shadow-1-strong">
+              <i class="fa fa-quote-left text-white"></i>
+            </div>
+            <p class="mb-0 mt-2 font-italic">
+              "I've been leading a happier life since I discovered Coursera. The courses and knowledge
+              helped me become more comfortable and confident.
+              <a href="#" class="text-info">@marzuckerberg</a>."
+            </p>
+            <footer class="blockquote-footer pt-4 mt-4 border-top">
+              Someone thrown away by
+              <cite title="Source Title">Three of Us</cite>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</div>
+<!-- Testimonial End -->
+{% endblock %}

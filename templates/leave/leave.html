@@ -1,0 +1,63 @@
+{% extends "layout/layout.html" %}
+{% block title %}Employee's Leave{% endblock %}
+{% block current %}Leave / Employee's Leave{% endblock %}
+{% block content %}
+<!-- Content Start -->
+<div class="container-fluid py-5">
+  <div class="container p-5 d-flex justify-content-center">
+    <div class="col-lg-5">
+      <div class="card border-0">
+        <div class="card-header bg-secondary text-center p-4">
+          <h1 class="text-white m-0">Add Leave</h1>
+        </div>
+        <div class="card-body rounded-bottom p-5 border border-primary">
+          <form action="/add_leave_post" autocomplete="on" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+              <select name="emp_id" id="emp_id" class="custom-select border-secondary border-1 px-4" style="height: 47px">
+                {% for employee in employees %}
+                <option value={{employee.emp_id}}>{{employee.first_name}} {{employee.last_name}} </option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-group">
+              <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+                <input placeholder="select date" type="date" name="start_date" class="form-control">
+                <label for="example">Start Date</label>
+                <i class="fas fa-calendar input-prefix" tabindex=0></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+                <input placeholder="select date" type="date" name="end_date" class="form-control">
+                <label for="example">End Date</label>
+                <i class="fas fa-calendar input-prefix" tabindex=0></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input type="number" class="form-control border-secondary border-1 p-4" required="required" step="1"
+                name="total_day" placeholder="Total Days" />
+            </div>
+
+            <div class="form-group">
+              <input type="reason" class="form-control border-secondary border-1 p-4" placeholder="Reason"
+                required="required" name="reason" />
+            </div>
+
+            <div class="form-group">
+
+              <div>
+                <button class="btn btn-primary btn-block border-0 py-3" type="submit">
+                  Submit
+                </button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Content End -->
+{% endblock %}
