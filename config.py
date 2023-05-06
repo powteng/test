@@ -1,7 +1,7 @@
 customhost = "testassignment1.cdvvcgampsrc.us-east-1.rds.amazonaws.com"
 customuser = "aws_user"
 custompass = "12345678"
-customdb = "testassignment1"
+customdb = "testassignment"
 custombucket = "assignmenttesting"
 customregion = "us-east-1"
 serverurl = "us-east-1"
