@@ -38,8 +38,8 @@ def add_employee(fn, ln, po, em, ge, ph, photo, ic):
     try:
         conn = db_conn()
         cursor = conn.cursor()
-        insert_sql = "INSERT INTO " + table + " VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, 0)"
-        cursor.execute(insert_sql, (None, fn, ln, po, em, s3_photo_key, s3_ic_key, ge, ph))
+        insert_sql = "INSERT INTO " + table + " (full_name, ic, role, email, phone, gender, s3_photo_key) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+        cursor.execute(insert_sql, (fn, ic, ro, em, ph, ge, s3_photo_key))
         conn.commit()
         try:
             print("Data inserted in MySQL RDS... uploading image to S3...")
